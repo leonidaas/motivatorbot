@@ -9,16 +9,17 @@ logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 crawler = Crawler()
-cid = int("HERE CHAT_ID")
+cid = int(454323424)
 
 print("HappyBot wurde instanziiert")
 
-updater = Updater(token='YOUR TOKEN ')
+updater = Updater(token='785333374:AAGiHCETBBEwIBJUY_qaYGrnIAbttBqqQn8')
 job = updater.job_queue
 dispatcher = updater.dispatcher
 
 #answer section
 def start(bot, update):
+    print(update.message.chat_id)
     bot.send_message(chat_id=update.message.chat_id, text="Hi, ich bin Leons persönlicher Bot. Ich helfe ihm dabei fokusiert und motiviert zu bleiben")
 
 def unknown(bot, update):
